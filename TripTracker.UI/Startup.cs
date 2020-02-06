@@ -61,8 +61,9 @@ namespace TripTracker.UI
             {
                 configure.AddPolicy("CreateTrips", policy =>
                 {
-                    policy.RequireAuthenticatedUser()
+                    policy.RequireUserName("roman@roman.com")
                         .Build();
+                    // policy.RequireAuthenticatedUser().Build();
                 });
             });
         }
